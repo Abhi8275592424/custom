@@ -13,10 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-      - name: set up python 3.11
-        uses: actions/setup-python@v3
-        with:
-          python-version: 3.11
+    - name: set up python 3.11
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.11
+    - name: install dependencies
+      run:
+        python -m pip install  --upgrade pip
+        if [ -f requirement.txt]; then pip install -r requirement.txt; fi
+    - name: check the syntax with flake8
+      run: |
+        flake8.
+
+
+
        
