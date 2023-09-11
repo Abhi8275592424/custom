@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-  custom build:
+  custom_build:
     runs-on: ubuntu-latest
 
     steps:
