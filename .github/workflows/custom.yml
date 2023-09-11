@@ -1,0 +1,22 @@
+
+name: python application
+
+on:
+  push:
+    branches:
+      "master"
+
+
+
+jobs:
+  custom build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: set up python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.11
+       
